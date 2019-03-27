@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wenneker Assignment
+% LaTeX Template
+% Version 2.0 (12/1/2019)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Frits Wenneker
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % Font size
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+\usepackage{hyperref}
+ 
+\urlstyle{same}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+	\normalfont\normalsize
+	\textsc{CNAM}\\ % Your university, school and/or department name(s)
+	\vspace{25pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
+	\vspace{20pt} % Whitespace
+	{\huge Projet RCP209 : Prediction of daily stock movements on the US market }\\ % The assignment title
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
+	\vspace{12pt} % Whitespace
+}
+
+\author{\LARGE Jerome Petit} % Your name
+
+\date{\normalsize\today} % Today's date (\today) or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+
+\section{Introduction}
+Dans le cadre du cours RCP209 du master TRIED, nous avons pu voir différentes m\'{e}thodes pour  l'analyse et la pr\'{e}diction de donn\'{e}es. L'objectif de ce projet est d'utiliser les diff\'{e}rentes notions abord\'{e}es au cours de cemodule dans un cas r\'{e}el. J'ai d\'{e}cid\'{e} de travailler sur le jeu de donn\'{e}es issue du challenge CFM : pr\'{e}diction des movements journalier des actions US. Le but est de pr\'{e}dire le signe du rendement du stock sur la p\'{e}riode 15h30-16H connaissant l'\'{e}volution par tranche de 5min sur la p\'{e}riode 9h-15H30. Par mouvement, l'organisateur du challenge entend le mouvement relatif \`{a} un certain benchmark qui n'est pas communiqu\'{e}. C'est pour la donn\'{e}e n'est pas un prix mais une difference de ratio , ainsi une valeur nulle signifie que l'action a \'{e}volu\'{e} de la même maniere que le benchmark. L'utilisation d'un benchmark est une technique courant dans la gestion de fond. Le benchmark peut être le CAC40, SP500 et l'objectif du g\'{e}rant est de surperform\'{e} ce benchmark.\newline
+Dans ce rapport je pr\'{e}sente les diff\'{e}rentes approche que j'ai pu tester au cours de ce challenge ainsi que le r\'{e}sultat obtenue pour chacune d elle
+\section{Analyse de données}
+\subsection{Premmière analyse}
+Pour ce projet nous disposons de 52918217 données d'entrainement. Parmi ces données d'entrainement il y a 347646 données manquantes soit 0.65\% del'échantillon disponible. Il y en a tout 745327 series temporelles de longueur 71. Le nombre 71 correspond au nombre de tranche de 5mins compris en 9h et 15h30. Ces series temporelles sontt issues de 680 actions pour 1511 dates différentes. Nous n'avons pas d'info sur les dates et les titres. Les dates s'étallent sur plusieurs années et donc certainement permettent d'avoir des séries temporelles sur différentes situations économiques.
+\end{document}
